@@ -1,0 +1,46 @@
+doctype html
+include ../layout/layout.pug
+
+block estilos 
+    link(rel="stylesheet", href="/css/usuarios.css")
+
+block contenido
+    //- pre= JSON.stringify(usuarios,undefined,2)
+    div.contenedor_principal
+        table.contenedor_tabla 
+            tr
+                th Nombre
+                th Imagen
+                th Email
+                th Estado
+                th Cargo
+                th(colspan="2") Acciones
+        
+            if usuarios
+                each usuario in usuarios
+                    tr
+                        td=usuario.nombre
+                        td
+                            img(src=`/img/${usuario.imagen}`, alt="Imagen de perfil")
+                        td=usuario.email
+                        td 
+                            p(class=`${usuario.estado ? 'estado_activo' : 'estado_inactivo'}`)= usuario.estado ? 'Activo' : 'Inactivo'
+                        td 
+                            p.cargo=usuario.role.nombreRol
+                        td
+                            a(href=`/editar-usuario/${usuario.idUsuario}` class="enlace_editar") Editar
+                            
+                        td
+                            a(href=`/eliminar-usuario/${usuario.idUsuario}` data-id=`${usuario.idUsuario}` class="enlace_eliminar") Eliminar
+
+
+    div.paginacion
+        
+        -var n=1;
+            while (n<=paginas)
+                a(href=`/usuarios?pagina=${n}` class=`${n==paginaActual ? 'paginaActual' : 'numeroPagina'}`) #{n++}
+
+block scripts 
+    script(src="/js/eliminarUsuario.js") 
+                
+

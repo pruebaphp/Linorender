@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4f46e5;
+    padding: 30px 80px;
+}
+
+.navegacion_2enlaces{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px 30px;
+    
+}
+
+.logotipo{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    color: white;
+    font-size: 25px;
+}
+
+.enlace_perfil, .enlace_logout{
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.enlace_perfil{
+    color: white;
+}
+
+.enlace_logout{
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    color: black;
+    
+}
+
+.enlace_logout:hover{
+    background-color: rgb(225, 225, 225);
+}
+
+.empresa,.nombrePagina{
+    text-align: center;
+}
+
+.empresa{
+    margin-top: 100px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.empresa_span{
+    font-weight: 400;
+}
+
+.nombrePagina{
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}

@@ -1,0 +1,40 @@
+extends ../layout/layout.pug
+
+block estilos 
+
+    link(rel="stylesheet", href="/css/login.css")
+
+block contenido 
+
+    form(action="" method="POST" enctype="multipart/form-data" novalidate)
+        if errores
+            div.mensajes 
+                each error in errores
+                    p.parrafoError= error.msg
+        //- pre= JSON.stringify(usuario,undefined,2)
+        //- pre= JSON.stringify(cargos,undefined,2)
+
+        div.contenedor
+            label(for="nombre" class="label") Nombres
+            input(type="text" name="nombre" id="nombre" class="campo_contenedor" placeholder="Ejm: Lino Router" value=`${data.nombre}`)
+            label(for="email" class="label") Email
+            input(type="email" name="email" id="email" class="campo_contenedor" placeholder="Ejm: lino@lino.com" value=`${data.email}`)
+            label(for="password" class="label") Contraseña
+            input(type="password" name="password" id="password" class="campo_contenedor" placeholder="Ingresa el password")
+            label(for="" class="label") Estado
+            select(name="estado" class="campo_contenedor")
+                option(value="1" selected=data ? data.estado==1 ? true : false : false) Activo 
+                option(value="0" selected=data ? data.estado==0 ? true : false : false) Inactivo 
+            label(for="" class="label") Cargo
+            select(name="cargo" class="campo_contenedor")
+                if cargos
+                    each cargo in cargos
+                        option(value=cargo.idRol selected=rolid==cargo.idRol ? true : false)=cargo.nombreRol 
+            label(for="" class="label") Imagen de perfil actual
+            div.contenedor_imagen
+                img(src=`/img/${imagen}`, alt="imagen de perfil")
+
+            label(for="" class="label") Puedes cambiar de imagen
+            input(type="file" name="archivo" class="input_img")
+            
+            input(type="submit" class="btnIniciar" value="Editar Usuario")

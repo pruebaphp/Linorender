@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color:#489be8;
+}
+
+.empresa,.nombrePagina{
+    text-align: center;
+}
+
+.empresa{
+    margin-top: 100px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.empresa_span{
+    font-weight: 400;
+}
+
+.nombrePagina{
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+.mensajes{
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.parrafoError{
+    background-color: #e53c52;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 6px 0;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 7px;
+    margin: 0 auto;
+    gap: 15px 0;
+    border: solid 1px #A0A0A0;
+    padding: 40px 30px;
+    margin-top: 30px;
+}
+
+.enlaces_auth{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+.btnIniciar{
+    background-color: #6366f1;
+    color: white;
+    padding: 15px 0;
+    border: none;
+    font-size: 15px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+.btnIniciar:hover{
+    cursor: pointer;
+    background-color: #4f46e5;
+}
+
+.campo_contenedor{
+    border: 1px solid #BDBDBD;
+    padding: 8px 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border-radius: 3px;
+    color: rgb(55, 55, 55);
+}
+
+.label{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+}
+
+.contenedor-mensaje,.contenedor-mensaje2{
+    /*#45AE17*/
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    color: white;
+    font-size: 25px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 8px;
+    letter-spacing: 1px;
+}
+
+.contenedor-mensaje{
+    background-color: #63CD35;
+}
+
+.contenedor-mensaje2{
+    background-color: #DFB106;
+}
+
+.span_suceso{
+    color: #900C3F;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+
+}
+.contenedor_imagen{
+    display: flex;
+    justify-content: center;
+}
+
+
+.input_img{
+    margin-bottom: 20px;
+}
+
+@media (max-width: 580px) {
+    .contenedor{
+        max-width: 350px;
+        width: 70%;
+    }
+
+    .enlaces_auth{
+        flex-direction: column;
+        text-align: center;
+        gap: 8px 0;
+    }
+
+    .mensajes, .contenedor-mensaje, .contenedor-mensaje2{
+        max-width: 400px;
+        width: 90%;
+        font-size: 20px;
+    }
+
+    
+}
+
+

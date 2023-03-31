@@ -1,0 +1,121 @@
+.contenedor_principal{
+    
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+
+.contenedor_tabla{
+    border-collapse: collapse;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    box-shadow: 1px 2px 28px 5px rgba(0,0,0,0.35);
+-webkit-box-shadow: 1px 2px 28px 5px rgba(0,0,0,0.35);
+-moz-box-shadow: 1px 2px 28px 5px rgba(0,0,0,0.35);
+    
+}
+
+th{
+    padding: 30px 30px;
+}
+
+td{
+    /*border: solid 1px #A2A2A2;*/
+    border-top: solid 1px #d5d5d5;;
+    padding: 10px 30px;
+    
+}
+
+img{
+    height: 100px;
+}
+
+.enlace_editar,.enlace_eliminar{
+   
+    padding: 5px 12px;
+    border-radius: 7px;
+    color: black;
+}
+.enlace_editar{
+    background-color: #EBE639;
+}
+
+.enlace_eliminar{
+    background-color: #EB3951;
+    color: white;
+}
+
+.cargo{
+    background-color: #898989;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 7px;
+}
+
+.estado_activo{
+    padding: 5px 15px;
+    border-radius: 7px;
+    background-color: #35ce37;
+    color: white;
+}
+
+.estado_inactivo{
+    padding: 5px 15px;
+    border-radius: 7px;
+    background-color: rgb(229, 55, 55);
+    color: white;
+}
+
+.paginacion{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px 10px;
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.numeroPagina{
+    /*background-color: #af265a;*/
+    border: solid 1px #6366f1;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+.numeroPagina:hover{
+    background-color: #4f46e5;
+    color: white;
+}
+
+.paginaActual{
+    border: solid 1px #6366f1;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    display: block;
+    background-color: rgb(138, 138, 138);
+    color: white;
+    pointer-events: none;
+}
+
+.swal2-title{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+}
+.swal2-html-container{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
